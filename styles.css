@@ -21,7 +21,7 @@ body {
 
 #app {
   width: 100%;
-  padding: 2rem;
+  padding: 2rem 2rem 0 2rem;
 }
 
 /* Navigation */
@@ -346,3 +346,36 @@ body {
     transform: translateX(0);
   }
 }
+
+/* Footer */
+.footer {
+  background: var(--color-blue-bg);
+  width: 100%;
+  padding: 3rem 2rem;
+}
+
+.footer-content {
+  max-width: 60rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-links {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.footer-link {
+  color: #FFF;
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  font-weight: 800;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
