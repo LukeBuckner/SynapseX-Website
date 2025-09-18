@@ -64,6 +64,34 @@
   <div id="app">
     <!-- Content goes here -->
   </div>
+  <script>
+    // Scroll-triggered animation for process section
+    let hasAnimated = false;
+    
+    function checkScroll() {
+      const processSection = document.querySelector('.process');
+      const processCards = document.querySelectorAll('.process-card, .flow-image');
+      
+      if (processSection && !hasAnimated) {
+        const rect = processSection.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        
+        // Trigger animation when process section is 50% visible
+        if (rect.top < windowHeight * 0.5 && rect.bottom > 0) {
+          hasAnimated = true;
+          processCards.forEach(card => {
+            card.classList.add('animate');
+          });
+        }
+      }
+    }
+    
+    // Listen for scroll events
+    window.addEventListener('scroll', checkScroll);
+    
+    // Check on page load in case section is already visible
+    window.addEventListener('load', checkScroll);
+  </script>
 </body>
 </html>
 
