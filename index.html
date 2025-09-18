@@ -1,233 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SynapseX | Brain-Computer Interface Project</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      line-height: 1.6;
-      background: linear-gradient(135deg, #0d0d2b 0%, #1a1a4a 40%, #0077ff 80%, #00e6e6 100%);
-      color: white;
-      background-size: 400% 400%;
-      animation: gradientShift 8s ease infinite;
-
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    .container {
-      max-width: 800px;
-      padding: 60px 40px;
-      text-align: center;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      border-radius: 20px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-      margin: 20px;
-    }
-
-    h1 {
-      font-size: 3.5rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-      background: linear-gradient(135deg, #667eea, #764ba2);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .subtitle {
-      font-size: 1.25rem;
-      color: #666;
-      margin-bottom: 3rem;
-      font-weight: 300;
-    }
-
-    .mission {
-      font-size: 1.5rem;
-      line-height: 1.8;
-      margin-bottom: 3rem;
-      color: #444;
-      font-weight: 400;
-    }
-
-    .highlight {
-      background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
-      padding: 2px 8px;
-      border-radius: 6px;
-      font-weight: 600;
-    }
-
-    .vision {
-      font-size: 1.1rem;
-      color: #666;
-      margin-bottom: 2rem;
-      line-height: 1.7;
-    }
-
-    .team-info {
-      background: rgba(102, 126, 234, 0.1);
-      padding: 2rem;
-      border-radius: 15px;
-      margin: 2rem 0;
-      border-left: 4px solid #667eea;
-    }
-
-    .team-info h3 {
-      color: #667eea;
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-    }
-
-    .team-info p {
-      color: #555;
-      font-size: 1rem;
-    }
-
-    .footer {
-      margin-top: 3rem;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(102, 126, 234, 0.2);
-      color: #888;
-      font-size: 0.9rem;
-    }
-
-    .logo {
-      width: 80px;
-      height: 80px;
-      margin: 0 auto 2rem;
-      background: linear-gradient(135deg, #667eea, #764ba2);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    @media (max-width: 768px) {
-      .container { padding: 40px 20px; margin: 10px; }
-      h1 { font-size: 2.5rem; }
-      .mission { font-size: 1.2rem; }
-      .subtitle { font-size: 1.1rem; }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .container > * {
-      animation: fadeIn 0.8s ease-out forwards;
-    }
-
-    .container > *:nth-child(2) { animation-delay: 0.1s; }
-    .container > *:nth-child(3) { animation-delay: 0.2s; }
-    .container > *:nth-child(4) { animation-delay: 0.3s; }
-    .container > *:nth-child(5) { animation-delay: 0.4s; }
-
-    .footer a:hover {
-      background-color: rgba(102, 126, 234, 0.1);
-      border-color: #667eea;
-      transform: translateY(-2px);
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta http-equiv="refresh" content="15"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SynapseX</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <div class="logo">
-      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- Animated neural network logo -->
-        <line x1="20" y1="5" x2="12" y2="18" stroke="rgba(255,255,255,0.6)" stroke-width="0" opacity="0">
-          <animate attributeName="stroke-width" values="0;1" dur="0.3s" begin="2s" fill="freeze"/>
-          <animate attributeName="opacity" values="0;1" dur="0.3s" begin="2s" fill="freeze"/>
-        </line>
-        <line x1="20" y1="5" x2="28" y2="18" stroke="rgba(255,255,255,0.6)" stroke-width="0" opacity="0">
-          <animate attributeName="stroke-width" values="0;1" dur="0.3s" begin="3s" fill="freeze"/>
-          <animate attributeName="opacity" values="0;1" dur="0.3s" begin="3s" fill="freeze"/>
-        </line>
-        <line x1="12" y1="18" x2="8" y2="30" stroke="rgba(255,255,255,0.6)" stroke-width="0" opacity="0">
-          <animate attributeName="stroke-width" values="0;1" dur="0.3s" begin="4s" fill="freeze"/>
-          <animate attributeName="opacity" values="0;1" dur="0.3s" begin="4s" fill="freeze"/>
-        </line>
-        <line x1="28" y1="18" x2="32" y2="30" stroke="rgba(255,255,255,0.6)" stroke-width="0" opacity="0">
-          <animate attributeName="stroke-width" values="0;1" dur="0.3s" begin="5s" fill="freeze"/>
-          <animate attributeName="opacity" values="0;1" dur="0.3s" begin="5s" fill="freeze"/>
-        </line>
-        
-        <!-- Nodes -->
-        <circle cx="20" cy="5" r="0" fill="white" opacity="0">
-          <animate attributeName="r" values="0;4" dur="0.5s" begin="0s" fill="freeze"/>
-          <animate attributeName="opacity" values="0;1" dur="0.3s" begin="0s" fill="freeze"/>
-        </circle>
-        <circle cx="12" cy="18" r="0" fill="white" opacity="0">
-          <animate attributeName="r" values="0;3.5" dur="0.5s" begin="2s" fill="freeze"/>
-          <animate attributeName="opacity" values="0;1" dur="0.3s" begin="2s" fill="freeze"/>
-        </circle>
-        <circle cx="28" cy="18" r="0" fill="white" opacity="0">
-          <animate attributeName="r" values="0;3.5" dur="0.5s" begin="3s" fill="freeze"/>
-          <animate attributeName="opacity" values="0;1" dur="0.3s" begin="3s" fill="freeze"/>
-        </circle>
-        <circle cx="8" cy="30" r="0" fill="white" opacity="0">
-          <animate attributeName="r" values="0;3" dur="0.5s" begin="4s" fill="freeze"/>
-          <animate attributeName="opacity" values="0;1" dur="0.3s" begin="4s" fill="freeze"/>
-        </circle>
-        <circle cx="32" cy="30" r="0" fill="white" opacity="0">
-          <animate attributeName="r" values="0;3" dur="0.5s" begin="5s" fill="freeze"/>
-          <animate attributeName="opacity" values="0;1" dur="0.3s" begin="5s" fill="freeze"/>
-        </circle>
-      </svg>
+  <nav class="nav" role="navigation" aria-label="Main Navigation">
+    <div class="nav-left">SynapseX</div>
+    <div class="nav-menu">
+      <div>Home</div>
+      <div>About</div>
+      <div>Research</div>
+      <div>Contact</div>
     </div>
-
-  <h1>Neural Interface Project</h1>
-
-    <p class="subtitle">Advancing Brain-Computer Interface Innovation</p>
-
-    <div class="mission">
-      We are dedicated to creating a <span class="highlight">functional BCI prototype</span> that translates neural signals into binary code. 
-      Our goal is to push the boundaries of human-computer interaction through collaboration across neuroscience, engineering, and computing.
+  </nav>
+  <div class="hero">
+    <div class="neuro-background"></div>
+    <div class="hero-gradient-bg"></div>
+    <div class="hero-left">
+      <div class="label">SynapseX @ Georgia Tech presents:</div>
+      <div class="title">Neural Interface Project</div>
+      <div class="description">Shaping the future of brain–computer interaction through student-led innovation, combining <span class="gradient-text">Neuroscience, Engineering, and Computing</span> to build the first functional BCI prototypes at Georgia Tech.</div>
     </div>
-
-    <div class="vision">
-      By combining expertise in <strong>neural signal processing</strong>, <strong>device engineering</strong>, and <strong>software development</strong>, we maximize innovation across every dimension of BCI research. 
-      SynapseX also prioritizes mentorship and learning, inviting students from all backgrounds to contribute to the development of cutting-edge technology.
+    <div class="hero-right">
+      <img src="neuro-human.jpg" alt="Neural Interface Visualization" class="neuro-human">
     </div>
+  </div>
 
-    <div class="team-info">
-      <h3>Our Approach</h3>
-      <p>
-        We believe that interdisciplinary collaboration is the key to unlocking the potential of brain-computer interfaces. 
-        From decoding neural signals to scalable software, SynapseX integrates multiple fields to accelerate progress toward real-world applications.
-      </p>
+
+
+  <div class="process">
+    <div class="process-header">
+      <div class="process-title">From Brain Signals to Binary Code</div>
+      <div class="process-subtitle">The process that transforms neural activity into digital output.</div>
     </div>
-
-    <div class="footer">
-      <p>SynapseX</p>
-      <p style="margin-top: 0.5rem; font-size: 0.8rem;">A student-led research organization at the Georgia Institute of Technology</p>
-
-      <div style="margin-top: 1.5rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
-        <a href="https://www.linkedin.com/company/synapse-x-at-georgia-tech" style="color: #667eea; text-decoration: none; font-size: 0.9rem; padding: 8px 16px; border: 1px solid rgba(102, 126, 234, 0.3); border-radius: 20px; transition: all 0.3s ease; display: inline-block;">
-          LinkedIn
-        </a>
-        <a href="https://gatech.campuslabs.com/engage/organization/synapsex" style="color: #667eea; text-decoration: none; font-size: 0.9rem; padding: 8px 16px; border: 1px solid rgba(102, 126, 234, 0.3); border-radius: 20px; transition: all 0.3s ease; display: inline-block;">
-          GT Engage
-        </a>
+    <div class="process-flow">
+      <div class="flow-image">
+        <img src="flow-neuro.jpg" alt="Neural Flow" class="flow-img">
+      </div>
+      <div class="process-card">
+        <div class="card-title">Neural Signal Processing</div>
+        <div class="card-description">Decoding brain activity into structured electrical patterns.</div>
+      </div>
+      <div class="process-card">
+        <div class="card-title">Device Engineering</div>
+        <div class="card-description">Hardware that captures, filters, and stabilizes the neural data.</div>
+      </div>
+      <div class="process-card">
+        <div class="card-title">Software Development</div>
+        <div class="card-description">Algorithms that convert the processed patterns into binary code.</div>
+      </div>
+      <div class="flow-image">
+        <img src="flow-binary.jpg" alt="Binary Flow" class="flow-img">
       </div>
     </div>
   </div>
+  <div id="app">
+    <!-- Content goes here -->
+  </div>
 </body>
 </html>
+
+
