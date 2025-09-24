@@ -128,7 +128,7 @@ body {
 
 .label {
   display: inline-flex;
-  padding: 0.3rem 1rem;
+  padding: 0.3rem 2rem;
   justify-content: center;
   align-items: center;
   border-radius: 2rem;
@@ -171,6 +171,165 @@ body {
   max-width: 50rem;
 }
 
+.cta {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.cta .label {
+  cursor: pointer;
+  transition: all .3s linear;
+}
+
+.cta .label:hover {
+  background: #d4c47c;
+  border-color: #d4c47c;
+  box-shadow: 0 8px 25px rgba(179, 163, 105, 0.4), 0 0px 10px rgba(0, 0, 0, 0.8);
+  color: #003057;
+}
+
+.quick-facts {
+  background: var(--color-blue-bg);
+  width: 100%;
+  padding: 2rem 2rem 10rem 2rem;
+}
+
+.quick-facts-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.fact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.fact-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.fact-label {
+  color: #FFF;
+  font-family: var(--font-sans);
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.fact-number {
+  color: #FFF;
+  font-family: var(--font-sans);
+  font-size: 4.5rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 0.8;
+}
+
+
+/* Our Mission Short Section */
+.our-mission-short {
+  background: #000000;
+  width: 100%;
+  padding: 0rem 3rem 4rem 0;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.mission-short-left {
+  flex: 1;
+}
+
+.mission-short-right {
+  flex: 2;
+}
+
+.mission-short-image {
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.mission-short-title {
+  color: #FFF;
+  font-family: var(--font-sans);
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.mission-short-description {
+  color: #FFF;
+  font-family: var(--font-sans);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* About Us Short Section */
+.about-us-short {
+  width: 100%;
+  padding: 0rem 4rem 4rem 5rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin: 0 auto;
+}
+
+.about-us-short-left {
+  flex: 2;
+}
+
+.about-us-short-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.we-neurons-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.about-us-short-title {
+  color: #FFF;
+  font-family: var(--font-sans);
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.about-us-short-description {
+  color: #FFF;
+  font-family: var(--font-sans);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
 .hero-right {
   display: flex;
   align-items: center;
@@ -201,7 +360,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5rem;
+  gap: 3rem;
   width: 100%;
   padding: 1.5rem 2rem 4rem 2rem;
   background: var(--color-blue-bg);
