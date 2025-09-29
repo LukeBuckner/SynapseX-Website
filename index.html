@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="refresh" content="15"> 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SynapseX</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,11 +13,11 @@
   <nav class="nav" role="navigation" aria-label="Main Navigation">
     <div class="nav-left">SynapseX</div>
     <div class="nav-menu">
-      <div>Home</div>
-      <div>About</div>
-      <div>Projects</div>
-      <div>Sponsors</div>
-      <div>Contact</div>
+      <div><a href="index.html" class="nav-link">Home</a></div>
+      <div><a href="about.html" class="nav-link">About</a></div>
+      <div><a href="#" class="nav-link">Projects</a></div>
+      <div><a href="#" class="nav-link">Sponsors</a></div>
+      <div><a href="#" class="nav-link">Contact</a></div>
     </div>
   </nav>
   <div class="hero">
@@ -29,7 +28,7 @@
       <div class="description">Pioneering student-led brain-computer interface innovation.
       </div>
       <div class="cta">
-        <div class="label">Learn More</div>
+        <a href="about.html" class="label">Learn More</a>
         <div class="label">Join Us</div>
       </div>
     </div>
@@ -83,32 +82,6 @@
     </div>
   </div>
 
-  <div class="process">
-    <div class="process-header">
-      <div class="process-title">From Brain Signals to Binary Code</div>
-      <div class="process-subtitle">The process that transforms neural activity into digital output.</div>
-    </div>
-    <div class="process-flow">
-      <div class="flow-image">
-        <img src="flow-neuro.jpg" alt="Neural Flow" class="flow-img">
-      </div>
-      <div class="process-card">
-        <div class="card-title">Neural Signal Processing</div>
-        <div class="card-description">Decoding brain activity into structured electrical patterns.</div>
-      </div>
-      <div class="process-card">
-        <div class="card-title">Device Engineering</div>
-        <div class="card-description">Hardware that captures, filters, and stabilizes the neural data.</div>
-      </div>
-      <div class="process-card">
-        <div class="card-title">Software Development</div>
-        <div class="card-description">Algorithms that convert the processed patterns into binary code.</div>
-      </div>
-      <div class="flow-image">
-        <img src="flow-binary.jpg" alt="Binary Flow" class="flow-img">
-      </div>
-    </div>
-  </div>
 
   <footer class="footer">
     <div class="footer-content">
@@ -121,40 +94,6 @@
     </div>
   </footer>
   <script>
-    // Scroll-triggered animation for process section
-    let hasAnimated = false;
-    
-    function checkScroll() {
-      const processSection = document.querySelector('.process');
-      const processCards = document.querySelectorAll('.process-card, .flow-image');
-      
-      if (processSection && !hasAnimated) {
-        const rect = processSection.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-        
-        // Trigger animation when process section is 50% visible
-        if (rect.top < windowHeight * 0.5 && rect.bottom > 0) {
-          hasAnimated = true;
-          processCards.forEach(card => {
-            card.classList.add('animate');
-          });
-        }
-      }
-
-      // Update process background opacity progressively on scroll
-      if (processSection) {
-        const total = Math.max(1, rect.height);
-        const visible = Math.min(Math.max(windowHeight - Math.max(rect.top, 0), 0), total);
-        const progress = Math.min(1, visible / (total * 0.8));
-        processSection.style.setProperty('--process-bg-alpha', String(progress));
-      }
-    }
-    
-    // Listen for scroll events
-    window.addEventListener('scroll', checkScroll);
-    
-    // Check on page load in case section is already visible
-    window.addEventListener('load', checkScroll);
 
     // Quick Facts: count-up animation on reveal
     (function initQuickFactsCountUp() {
@@ -265,8 +204,8 @@
         const scrolled = Math.min(Math.max(-rect.top + viewportH * 0.15, 0), distance);
         const progress = scrolled / distance; // 0..1
 
-        // With two cards, switch around 45%
-        const threshold = 0.45;
+        // With two cards, switch around 70% (increased from 45%)
+        const threshold = 0.50;
         const index = progress < threshold ? 0 : 1;
         cards.forEach((el, i) => {
           if (i === index) el.classList.add('active'); else el.classList.remove('active');

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About - SynapseX</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="nav" role="navigation" aria-label="Main Navigation">
+    <div class="nav-left">SynapseX</div>
+    <div class="nav-menu">
+      <div><a href="index.html" class="nav-link">Home</a></div>
+      <div><a href="about.html" class="nav-link active">About</a></div>
+      <div><a href="#" class="nav-link">Projects</a></div>
+      <div><a href="#" class="nav-link">Sponsors</a></div>
+      <div><a href="#" class="nav-link">Contact</a></div>
+    </div>
+  </nav>
+
+  <div class="about-content">
+    <div class="about-section">
+      <div class="gradient-cards">
+        <div class="gradient-card">
+          <h2>Who We Are</h2>
+          <p>Founded in 2024, SynapseX is a Registered Student Organization at Georgia Tech. Our members work in interdisciplinary teams, research, signal processing, device engineering, and software development, to deliver working BCI prototypes.</p>
+        </div>
+        <div class="gradient-card">
+          <h2>Our Mission</h2>
+          <p>SynapseX exists to push the boundaries of neurotechnology while creating a pipeline for student learning and discovery. We aim to train the next generation of innovators by tackling projects that merge brain science with advanced computing.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-section">
+      <div class="process-container">
+        <div class="about-section-content">
+          <div class="about-text">
+            <h2>Our Process</h2>
+            <p>From neural signals to binary code, our interdisciplinary approach ensures that every project benefits from diverse perspectives and expertise.</p>
+          </div>
+        </div>
+        <div class="process">
+          <div class="process-flow">
+            <div class="flow-image">
+              <img src="flow-neuro.jpg" alt="Neural Flow" class="flow-img">
+            </div>
+            <div class="process-card">
+              <div class="card-title">Neural Signal Processing</div>
+              <div class="card-description">Decoding brain activity into structured electrical patterns.</div>
+            </div>
+            <div class="process-card">
+              <div class="card-title">Device Engineering</div>
+              <div class="card-description">Hardware that captures, filters, and stabilizes the neural data.</div>
+            </div>
+            <div class="process-card">
+              <div class="card-title">Software Development</div>
+              <div class="card-description">Algorithms that convert the processed patterns into binary code.</div>
+            </div>
+            <div class="flow-image">
+              <img src="flow-binary.jpg" alt="Binary Flow" class="flow-img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about-section">
+      <div class="about-section-content">
+        <div class="about-text">
+          <h2>Our Impact</h2>
+          <p>Since our founding, SynapseX has made significant strides in advancing student-led neurotechnology research and education. Our impact extends beyond our immediate community, influencing the broader landscape of accessible BCI development.</p>
+          <div class="impact-stats">
+            <div class="stat-item">
+              <div class="stat-number">50+</div>
+              <div class="stat-label">Active Members</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">3</div>
+              <div class="stat-label">Active Research Projects</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">100%</div>
+              <div class="stat-label">Student Led</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">2024</div>
+              <div class="stat-label">Founded</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+
+
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="https://www.instagram.com/gtsynapsx/" class="footer-link">Instagram</a>
+        <a href="https://join.slack.com/t/synapsex/shared_invite/zt-3be6l7lzp-OHI2h9L0Tjq_se0ksqh3SQ" class="footer-link">Slack</a>
+        <a href="https://gatech.campuslabs.com/engage/organization/synapsex" class="footer-link">GT Engage</a>
+        <a href="https://www.linkedin.com/company/synapse-x-at-georgia-tech/" class="footer-link">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Add smooth scrolling for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Add fade-in animation for sections on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all about sections
+    document.querySelectorAll('.about-section').forEach(section => {
+      observer.observe(section);
+    });
+
+    // Scroll-triggered animation for process section
+    let hasAnimated = false;
+    
+    function checkScroll() {
+      const processSection = document.querySelector('.process');
+      const processCards = document.querySelectorAll('.process-card, .flow-image');
+      
+      if (processSection && !hasAnimated) {
+        const rect = processSection.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        
+        // Trigger animation when process section is 50% visible
+        if (rect.top < windowHeight * 0.5 && rect.bottom > 0) {
+          hasAnimated = true;
+          processCards.forEach(card => {
+            card.classList.add('animate');
+          });
+        }
+      }
+
+      // Update process background opacity progressively on scroll
+      if (processSection) {
+        const total = Math.max(1, rect.height);
+        const visible = Math.min(Math.max(windowHeight - Math.max(rect.top, 0), 0), total);
+        const progress = Math.min(1, visible / (total * 0.8));
+        processSection.style.setProperty('--process-bg-alpha', String(progress));
+      }
+    }
+    
+    // Listen for scroll events
+    window.addEventListener('scroll', checkScroll);
+    
+    // Check on page load in case section is already visible
+    window.addEventListener('load', checkScroll);
+  </script>
+</body>
+</html>
