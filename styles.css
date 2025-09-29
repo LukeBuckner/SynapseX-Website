@@ -648,6 +648,257 @@ body {
   transform: translateY(-2px);
 }
 
+/* Projects Page Styles */
+.projects-content {
+  width: 100%;
+  padding: 4rem 2rem;
+}
+
+.projects-hero {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #000000 0%, #1a1a2e 50%, #16213e 100%);
+  position: relative;
+  margin-top: -5rem;
+  padding-top: 5rem;
+}
+
+.projects-hero-content {
+  text-align: center;
+  max-width: 60rem;
+  padding: 0 2rem;
+}
+
+.projects-title {
+  color: #FFF;
+  font-family: var(--font-sans);
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0 0 1rem 0;
+}
+
+.projects-subtitle {
+  color: #FFF;
+  font-family: var(--font-sans);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.4;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.projects-section {
+  max-width: 80rem;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.projects-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.projects-container {
+  padding: 2rem 0;
+}
+
+/* Timeline Styles */
+.timeline {
+  position: relative;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+  position: relative;
+  gap: 5rem;
+  width: 100%;
+  opacity: 0.3;
+  transform: translateX(-30px);
+  transition: all 0.8s ease;
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.timeline-item.visible .timeline-number {
+  border-color: #A066FF;
+  color: #A066FF;
+  background: rgba(160, 102, 255, 0.1);
+  box-shadow: 0 0 20px rgba(160, 102, 255, 0.3);
+}
+
+.timeline-item.visible .timeline-content {
+  background: radial-gradient(circle at top left, rgba(91, 46, 145, 0.5) 0%, rgba(0, 0, 0, 1) 100%);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 40px rgba(91, 46, 145, 0.2);
+  transform: translateY(-3px) scale(1.01);
+}
+
+.timeline-item.visible .timeline-title {
+  color: #fff;
+}
+
+.timeline-item.visible .timeline-subtitle {
+  color: #ccc;
+}
+
+.timeline-item.visible .timeline-description {
+  color: #aaa;
+}
+
+.timeline-number {
+  width: 8rem;
+  border-radius: 50px;
+  border: 2px solid #666;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #666;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+  padding: 0.5rem;
+}
+
+
+.timeline-content {
+  flex: 1;
+  background: radial-gradient(circle at top left, rgba(91, 46, 145, 0.15) 0%, rgba(0, 0, 0, 0.9) 100%);
+  border: 2px solid rgba(132, 0, 255, 1);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.timeline-icon {
+  flex-shrink: 0;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.icon-shape {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #666;
+  border-radius: 0.3rem;
+  background: transparent;
+  position: relative;
+}
+
+.icon-shape::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid #666;
+  border-radius: 50%;
+}
+
+.icon-elements {
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+}
+
+.small-circle {
+  width: 0.5rem;
+  height: 0.5rem;
+  border: 1px solid #666;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.small-rectangle {
+  width: 1rem;
+  height: 0.5rem;
+  border: 1px solid #666;
+  border-radius: 0.1rem;
+  background: transparent;
+}
+
+.timeline-text {
+  flex: 1;
+}
+
+.timeline-title {
+  color: #FFF;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  font-family: var(--font-sans);
+}
+
+.timeline-subtitle {
+  color: #FFF;
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0 0 0.8rem 0;
+  font-family: var(--font-sans);
+  opacity: 0.9;
+}
+
+.timeline-description {
+  color: #FFF;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  font-family: var(--font-sans);
+  opacity: 0.9;
+}
+
+/* Responsive Design for Timeline */
+@media (max-width: 768px) {
+  .timeline-item {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .timeline-number {
+    width: 100%;
+  }
+  
+  .timeline-content {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .timeline-icon {
+    align-self: center;
+  }
+}
+
 /* About Page Styles */
 
 /* Process Container */
