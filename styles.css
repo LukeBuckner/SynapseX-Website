@@ -468,6 +468,7 @@ body {
   width: 100%;
   padding: 4rem 2rem 4rem 2rem;
   background: linear-gradient(to bottom, transparent 0%, var(--color-blue-bg) 100%);
+  
 }
 
 .process-header {
@@ -656,8 +657,8 @@ body {
   padding: 3rem;
   border-radius: 2rem;
   background: radial-gradient(circle at top left, rgba(91, 46, 145, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%);
-  border: 2px solid rgba(91, 46, 145, 0.3);
-  box-shadow: 0 8px 32px rgba(91, 46, 145, 0.2);
+  border: 2px solid rgb(91, 46, 145);
+  box-shadow: 0 0px 32px rgba(91, 46, 145, 0.568);
 }
 
 /* Gradient Cards */
@@ -672,18 +673,19 @@ body {
   flex: 1;
   padding: 2rem;
   border-radius: 1.5rem;
-  background: radial-gradient(circle at top left, rgba(91, 46, 145, 0.3) 0%, rgba(0, 0, 0, 0.9) 100%);
+  background: radial-gradient(circle at top left, rgba(91, 46, 145, 0.4) 0%, rgba(0, 0, 0, 0.9) 100%);
   position: relative;
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
+  border: 2px solid rgba(94, 45, 153, 0.788);
 }
 
 
 
 .gradient-card:hover {
   transform: translateY(-3px) scale(1.01);
-  background: radial-gradient(circle at top left, rgba(91, 46, 145, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  background: radial-gradient(circle at top left, rgba(91, 46, 145, .8) 0%, rgba(0, 0, 0, 1) 100%);
 }
 
 .gradient-card h2 {
@@ -838,79 +840,6 @@ body {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
-.activity-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.activity-item {
-  padding: 1.5rem;
-  border-radius: 1rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 2px solid #5B2E91;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 0 20px rgba(58, 156, 239, 0.15),
-              0 0 40px rgba(176, 102, 165, 0.1),
-              0 0 60px rgba(231, 76, 60, 0.08);
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.activity-item::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, 
-    rgba(58, 156, 239, 0.1) 0%, 
-    rgba(176, 102, 165, 0.1) 50%, 
-    rgba(231, 76, 60, 0.1) 100%);
-  opacity: 0;
-  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  pointer-events: none;
-}
-
-.activity-item:hover {
-  transform: translateY(-8px) scale(1.02);
-  background: linear-gradient(180deg, #6E3FAE 0%, #2B1B47 100%);
-  border-color: #A066FF;
-  box-shadow: 0 0 40px rgba(58, 156, 239, 0.4),
-              0 0 80px rgba(176, 102, 165, 0.3),
-              0 0 120px rgba(231, 76, 60, 0.25),
-              0 20px 40px rgba(0, 0, 0, 0.3),
-              0 8px 25px rgba(155, 93, 229, 0.3);
-}
-
-.activity-item:hover::before {
-  opacity: 1;
-}
-
-.activity-item h3 {
-  color: #FFF;
-  font-family: var(--font-sans);
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin: 0 0 1rem 0;
-  position: relative;
-  z-index: 1;
-}
-
-.activity-item p {
-  color: #FFF;
-  font-family: var(--font-sans);
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  opacity: 0.8;
-  margin: 0;
-  position: relative;
-  z-index: 1;
-}
 
 .impact-stats {
   display: grid;
@@ -934,35 +863,10 @@ body {
   cursor: pointer;
 }
 
-.stat-item::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, 
-    rgba(58, 156, 239, 0.1) 0%, 
-    rgba(176, 102, 165, 0.1) 50%, 
-    rgba(231, 76, 60, 0.1) 100%);
-  opacity: 0;
-  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  pointer-events: none;
-}
-
 .stat-item:hover {
   transform: translateY(-8px) scale(1.02);
   background: linear-gradient(180deg, #6E3FAE 0%, #2B1B47 100%);
   border-color: #A066FF;
-  box-shadow: 0 0 40px rgba(58, 156, 239, 0.4),
-              0 0 80px rgba(176, 102, 165, 0.3),
-              0 0 120px rgba(231, 76, 60, 0.25),
-              0 20px 40px rgba(0, 0, 0, 0.3),
-              0 8px 25px rgba(155, 93, 229, 0.3);
-}
-
-.stat-item:hover::before {
-  opacity: 1;
 }
 
 .stat-number {
@@ -972,8 +876,6 @@ body {
   font-weight: 700;
   line-height: 1;
   margin-bottom: 0.5rem;
-  position: relative;
-  z-index: 1;
 }
 
 .stat-label {
@@ -982,106 +884,9 @@ body {
   font-size: 1rem;
   font-weight: 500;
   opacity: 0.8;
-  position: relative;
-  z-index: 1;
 }
 
-.process-steps {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-top: 2rem;
-}
 
-.step {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.5rem;
-  padding: 1.5rem;
-  border-radius: 1rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.step-number {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  background: linear-gradient(90deg, #3A9CEF 0%, #B066A5 50%, #E74C3C 100%);
-  color: #FFF;
-  font-family: var(--font-sans);
-  font-size: 1.2rem;
-  font-weight: 700;
-  flex-shrink: 0;
-}
-
-.step-content h3 {
-  color: #FFF;
-  font-family: var(--font-sans);
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin: 0 0 0.5rem 0;
-}
-
-.step-content p {
-  color: #FFF;
-  font-family: var(--font-sans);
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  opacity: 0.8;
-  margin: 0;
-}
-
-.cta-buttons {
-  display: flex;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.cta-button {
-  display: inline-flex;
-  padding: 0.8rem 2rem;
-  justify-content: center;
-  align-items: center;
-  border-radius: 2rem;
-  font-family: var(--font-sans);
-  font-size: 1.1rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.cta-button.primary {
-  border: 2px solid #b3a369;
-  background: #00305713;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  color: #FFF;
-}
-
-.cta-button.primary:hover {
-  background: #d4c47c;
-  border-color: #d4c47c;
-  box-shadow: 0 8px 25px rgba(179, 163, 105, 0.4), 0 0px 10px rgba(0, 0, 0, 0.8);
-  color: #003057;
-}
-
-.cta-button.secondary {
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  background: transparent;
-  color: #FFF;
-}
-
-.cta-button.secondary:hover {
-  border-color: #b3a369;
-  background: rgba(179, 163, 105, 0.1);
-  color: #b3a369;
-}
 
 /* Responsive Design for About Page */
 @media (max-width: 768px) {
@@ -1136,13 +941,6 @@ body {
     font-size: 1.1rem;
   }
   
-  .activity-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .cta-buttons {
-    flex-direction: column;
-  }
   
   .nav-menu {
     gap: 0.5rem;
@@ -1153,3 +951,4 @@ body {
   }
 }
 
+}
