@@ -11,7 +11,7 @@
 </head>
 <body>
   <nav class="nav" role="navigation" aria-label="Main Navigation">
-    <div class="nav-left">SynapseX</div>
+    <div class="nav-left"><img src="logo.png" alt="SynapseX logo" class="brand-logo"></div>
     <div class="nav-menu">
       <div><a href="index.html" class="nav-link">Home</a></div>
       <div><a href="about.html" class="nav-link">About</a></div>
@@ -24,7 +24,7 @@
     <div class="neuro-background"></div>
     <div class="hero-gradient-bg"></div>
     <div class="hero-left">
-      <div class="title">SynapseX @ Georgia Tech</div>
+      <img src="synapseatgt.png" alt="SynapseX logo" class="hero-logo">
       <div class="description">Pioneering student-led brain-computer interface innovation.
       </div>
       <div class="cta">
@@ -33,7 +33,7 @@
       </div>
     </div>
     <div class="hero-right">
-      <img src="neuro-human.jpg" alt="Neural Interface Visualization" class="neuro-human">
+      <img src="neuro-human-blue.jpg" alt="Neural Interface Visualization" class="neuro-human">
     </div>
   </div>
 
@@ -65,8 +65,8 @@
           <div class="about-us-short-title">Who We Are</div>
           <div class="about-us-short-description">We are Georgia Tech’s first student-run BCI organization, uniting students from <span class="gradient-text">Neuroscience, Computer Science, Biomedical Engineering, Electrical Engineering, and beyond</span> to build real prototypes, publish tutorials, and shape the future of neurotechnology.</div>
         </div>
-        <div class="about-us-short-right">
-            <img src="we-neurons.png" alt="We Neurons" class="we-neurons-image">
+          <div class="about-us-short-right">
+            <img src="we-neurons-blue.png" alt="We Neurons" class="we-neurons-image">
         </div>
       </div>
 
@@ -204,8 +204,8 @@
         const scrolled = Math.min(Math.max(-rect.top + viewportH * 0.15, 0), distance);
         const progress = scrolled / distance; // 0..1
 
-        // With two cards, switch around 70% (increased from 45%)
-        const threshold = 0.50;
+        // Switch earlier ~15% scroll to activate much sooner
+        const threshold = 0.05;
         const index = progress < threshold ? 0 : 1;
         cards.forEach((el, i) => {
           if (i === index) el.classList.add('active'); else el.classList.remove('active');
