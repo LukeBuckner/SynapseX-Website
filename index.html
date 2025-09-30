@@ -58,27 +58,23 @@
     </div>
   </div>
 
-  <div class="about-mission-stack">
-    <div class="stack-viewport">
-      <div class="about-us-short section-card stack-card active">
-        <div class="about-us-short-left">
-          <div class="about-us-short-title">Who We Are</div>
-          <div class="about-us-short-description">We are Georgia Tech’s first student-run BCI organization, uniting students from <span class="gradient-text">Neuroscience, Computer Science, Biomedical Engineering, Electrical Engineering, and beyond</span> to build real prototypes, publish tutorials, and shape the future of neurotechnology.</div>
-        </div>
-          <div class="about-us-short-right">
-            <img src="we-neurons-blue.png" alt="We Neurons" class="we-neurons-image">
-        </div>
-      </div>
+  <div class="about-us-short">
+    <div class="about-us-short-left">
+      <div class="about-us-short-title">Who We Are</div>
+      <div class="about-us-short-description">We are Georgia Tech's first student-run BCI organization, uniting students from <span class="gradient-text">Neuroscience, Computer Science, Biomedical Engineering, Electrical Engineering, and beyond</span> to build real prototypes, publish tutorials, and shape the future of neurotechnology.</div>
+    </div>
+    <div class="about-us-short-right">
+      <img src="we-neurons-blue.png" alt="We Neurons" class="we-neurons-image">
+    </div>
+  </div>
 
-      <div class="our-mission-short section-card stack-card">
-        <div class="mission-short-left">
-          <img src="cs-engineering-neurology.jpg" alt="CS, Engineering, Neurology" class="mission-short-image">
-        </div>
-        <div class="mission-short-right">
-          <div class="mission-short-title">Our Mission</div>
-          <div class="mission-short-description">We integrate neuroscience, engineering, and computer science to design brain-computer interfaces that unlock new forms of human machine interaction.</div>
-        </div>
-      </div>
+  <div class="our-mission-short">
+    <div class="mission-short-left">
+      <img src="cs-engineering-neurology.jpg" alt="CS, Engineering, Neurology" class="mission-short-image">
+    </div>
+    <div class="mission-short-right">
+      <div class="mission-short-title">Our Mission</div>
+      <div class="mission-short-description">We integrate neuroscience, engineering, and computer science to design brain-computer interfaces that unlock new forms of human machine interaction.</div>
     </div>
   </div>
 
@@ -187,37 +183,6 @@
     })();
 
     // Hero image now uses CSS-only fade-in on initial load
-    
-    // Stacked cards swap on scroll (Our Mission / Who We Are)
-    (function initAboutMissionStack() {
-      const stack = document.querySelector('.about-mission-stack');
-      const cards = stack ? Array.from(stack.querySelectorAll('.stack-card')) : [];
-      if (!stack || cards.length === 0) return;
-
-      // Map scroll progress (0..1) inside the stack to active card index
-      function updateActive() {
-        const rect = stack.getBoundingClientRect();
-        const viewportH = window.innerHeight;
-        const totalHeight = stack.offsetHeight;
-        // Normalize scroll progress within the stack (less aggressive)
-        const distance = Math.max(1, totalHeight - viewportH * 0.2);
-        const scrolled = Math.min(Math.max(-rect.top + viewportH * 0.15, 0), distance);
-        const progress = scrolled / distance; // 0..1
-
-        // Switch earlier ~15% scroll to activate much sooner
-        const threshold = 0.05;
-        const index = progress < threshold ? 0 : 1;
-        cards.forEach((el, i) => {
-          if (i === index) el.classList.add('active'); else el.classList.remove('active');
-        });
-      }
-
-      // Use scroll + resize listeners for broad compatibility
-      window.addEventListener('scroll', updateActive, { passive: true });
-      window.addEventListener('resize', updateActive);
-      window.addEventListener('load', updateActive);
-      updateActive();
-    })();
   </script>
 </body>
 </html>
