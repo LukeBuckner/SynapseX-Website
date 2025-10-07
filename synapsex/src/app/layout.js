@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
       <body suppressHydrationWarning>
         <nav className="nav" role="navigation" aria-label="Main Navigation">
           <div className="nav-left">
-            <Image src="/logo.png" alt="SynapseX logo" className="brand-logo" width={112} height={28} />
+            <Image src="/logo2dgold.png" alt="SynapseX logo" className="brand-logo" width={112} height={28} />
           </div>
           <div className="nav-menu">
             <div><Link href="/" className="nav-link">Home</Link></div>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import SpotlightCard from '../components/SpotlightCard/SpotlightCard';
 
 export default function Home() {
   return (
@@ -8,11 +9,31 @@ export default function Home() {
         <div className="neuro-background"></div>
         <div className="hero-gradient-bg"></div>
         <div className="hero-left">
-          <Image src="/synapseatgt.png" alt="SynapseX logo" className="hero-logo" width={256} height={64} />
+          <Image src="/synapseatgt2copy.png" alt="SynapseX logo" className="hero-logo" width={256} height={64} />
           <div className="description">Pioneering student-led brain-computer interface innovation.</div>
           <div className="cta">
             <Link href="#about" className="label">Learn More</Link>
             <div className="label">Join Us</div>
+          </div>
+          
+          {/* Quick Facts moved here */}
+          <div className="hero-quick-facts">
+            <div className="hero-fact-item">
+              <div className="hero-fact-label">Active Members</div>
+              <div className="hero-fact-number">50+</div>
+            </div>
+            <div className="hero-fact-item">
+              <div className="hero-fact-label">Research Projects</div>
+              <div className="hero-fact-number">3</div>
+            </div>
+            <div className="hero-fact-item">
+              <div className="hero-fact-label">Founded</div>
+              <div className="hero-fact-number">2024</div>
+            </div>
+            <div className="hero-fact-item">
+              <div className="hero-fact-label">Student Led</div>
+              <div className="hero-fact-number">100%</div>
+            </div>
           </div>
         </div>
         <div className="hero-right">
@@ -20,67 +41,22 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="quick-facts">
-        <div className="quick-facts-content">
-          <div className="fact-item">
-            <div className="fact-label">Active Members</div>
-            <div className="fact-number">50+</div>
-          </div>
-          <div className="fact-item">
-            <div className="fact-label">Research Projects</div>
-            <div className="fact-number">3</div>
-          </div>
-          <div className="fact-item">
-            <div className="fact-label">Founded</div>
-            <div className="fact-number">2024</div>
-          </div>
-          <div className="fact-item">
-            <div className="fact-label">Student Led</div>
-            <div className="fact-number">100%</div>
-          </div>
-        </div>
-      </div>
-
-      {/* Simple sections: Who We Are then Our Mission */}
-      <div className="about-us-short">
-        <div className="about-us-short-left">
-          <div className="about-us-short-title">Who We Are</div>
-          <div className="about-us-short-description">We are Georgia Tech's first student-run BCI organization, uniting students from <span className="gradient-text">Neuroscience, Computer Science, Biomedical Engineering, Electrical Engineering, and beyond</span> to build real prototypes, publish tutorials, and shape the future of neurotechnology.</div>
-        </div>
-        <div className="about-us-short-right">
-          <Image src="/we-neurons-blue.png" alt="We Neurons" className="we-neurons-image" width={600} height={400} />
-        </div>
-      </div>
-
-
-
-
-
-      <div className="our-mission-short">
-        <div className="mission-short-left">
-          <Image src="/cs-engineering-neurology.jpg" alt="CS, Engineering, Neurology" className="mission-short-image" width={600} height={400} />
-        </div>
-        <div className="mission-short-right">
-          <div className="mission-short-title">Our Mission</div>
-          <div className="mission-short-description">We integrate neuroscience, engineering, and computer science to design brain-computer interfaces that unlock new forms of human machine interaction.</div>
-        </div>
-      </div>
-
-      {/* Extended About Content */}
+      {/* About Content */}
       <div className="about-content" id="about">
         <div className="about-section">
           <div className="gradient-cards">
-            <div className="gradient-card">
+            <SpotlightCard className="about-us">
               <h2>Who We Are</h2>
               <p>Founded in 2024, SynapseX is a Registered Student Organization at Georgia Tech. Our members work in interdisciplinary teams, research, signal processing, device engineering, and software development, to deliver working BCI prototypes.</p>
-            </div>
-            <div className="gradient-card">
+            </SpotlightCard>
+            <SpotlightCard className="our-mission">
               <h2>Our Mission</h2>
               <p>SynapseX exists to push the boundaries of neurotechnology while creating a pipeline for student learning and discovery. We aim to train the next generation of innovators by tackling projects that merge brain science with advanced computing.</p>
-            </div>
+            </SpotlightCard>
           </div>
         </div>
-
+       
+        {/* Process Section */}
         <div className="about-section">
           <div className="process-container">
             <div className="about-section-content">
@@ -114,6 +90,12 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* Projects Section */}
+      <div className="projects-section">
+          <h2>Our Projects</h2>
+          <p>Our projects are a testament to our interdisciplinary approach and our commitment to pushing the boundaries of neurotechnology.</p>
+        </div>
     </>
   );
 }
