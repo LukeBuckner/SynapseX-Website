@@ -448,6 +448,7 @@ p{
   outline-color: var(--color-blue-primary);
   box-shadow: 0 0 40px -4px rgba(30, 30, 255, 0.75), 0 0 70px -10px rgba(30, 30, 255, 0.45);
   transition: outline-color 0.1s ease-in, box-shadow 0.1s ease-in;
+  width: auto;
 }
 
 .flow-img { 
@@ -822,7 +823,9 @@ p{
   font-weight: 500;
   color: var(--color-white);
 }
-
+.sponsor-section {
+  padding-bottom: 10rem;
+}
 
 
 /* Responsive Timeline */
@@ -868,20 +871,17 @@ p{
 
 .sponsor-container {
   background: #1e1eff;
-  max-width: 1000px;
   margin: 0 auto;
-  padding: 2rem 1rem;
-  width: 90%;
+  padding: 2rem 5rem;
+  max-width: 1200px;
   border-radius: 1.5rem;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 
 
+
 }
 
-.sponsor-content {
-  text-align: center;
-  color: var(--color-white);
-}
+
 
 .sponsor-content h2 {
   font-size: 3rem;
@@ -889,16 +889,17 @@ p{
   margin-bottom: 2rem;
   background: linear-gradient(135deg, var(--color-white), var(--color-blue));
   background-clip: text;
+  text-align: center;
 }
 
 .sponsor-content p {
   font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 3rem;
-  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
   opacity: 0.9;
+  text-align: left;
 }
 
 .sponsor-buttons {
@@ -944,6 +945,10 @@ p{
   transform: translateY(-2px);
 }
 
+.metallic-logo-container {
+  margin-left: 9rem;
+}
+
 /* Responsive Sponsor Section */
 @media (max-width: 768px) {
   .sponsor-section { padding: 3rem 0; }
@@ -951,4 +956,162 @@ p{
   .sponsor-content p { font-size: 1rem; }
   .sponsor-buttons { flex-direction: column; align-items: center; }
   .sponsor-btn { width: 100%; max-width: 300px; }
+}
+
+/* Contact Section Styles */
+.contact-section {
+  background-color: #000;
+  min-height: 100vh;
+  padding: 0;
+}
+
+.contact-layout {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  align-items: center;
+}
+
+.metallic-logo-container {
+  width: 40%;
+  height: 100%;
+}
+
+.contact-info-container {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5%;
+}
+
+.contact-content {
+  color: white;
+  max-width: 500px;
+}
+
+.contact-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.contact-header .location {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+
+.contact-details {
+  margin: 2rem 0;
+}
+
+.contact-details h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.contact-details p {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+
+.copyright {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.copyright p {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.social-media {
+  margin: 2rem 0;
+}
+
+.social-media h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.social-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+.social-link svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Responsive Contact Section */
+@media (max-width: 768px) {
+  .contact-layout {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .metallic-logo-container,
+  .contact-info-container {
+    width: 100%;
+    height: 50vh;
+
+  }
+  
+  .contact-header h2 {
+    font-size: 2rem;
+  }
+  
+  .contact-header .location {
+    font-size: 1.1rem;
+  }
+  
+  .contact-details h3 {
+    font-size: 1.5rem;
+  }
+  
+  .contact-details p {
+    font-size: 1rem;
+  }
+  
+  .social-media h3 {
+    font-size: 1.5rem;
+  }
+  
+  .social-link {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .social-link svg {
+    width: 20px;
+    height: 20px;
+  }
 }
