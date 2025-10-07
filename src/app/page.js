@@ -10,15 +10,15 @@ import MetalicLogo from '../components/MetalicLogo';
 export default function Home() {
   return (
     <>
-      <div className="hero">
+      <div className="hero" id="home">
         <div className="neuro-background"></div>
         <div className="hero-gradient-bg"></div>
         <div className="hero-left">
           <Image src="/synapseatgt2copy.png" alt="SynapseX logo" className="hero-logo" width={256} height={64} />
           <div className="description">Pioneering student-led brain-computer interface innovation.</div>
           <div className="cta">
-            <Link href="#about" className="label">Learn More</Link>
-            <div className="label">Join Us</div>
+            <Link href="#projects" className="label primary">Explore Our Research</Link>
+            <Link href="#contact" className="label">Get Involved</Link>
           </div>
         </div>
         <div className="hero-right">
@@ -121,23 +121,25 @@ export default function Home() {
       </div>
 
       {/* Projects Timeline Section */}
-      <ScrollTimeline />
+      <div id="projects">
+        <ScrollTimeline />
+      </div>
 
       {/* Sponsor Section */}
-      <div className="sponsor-section">
+      <div className="sponsor-section" id="sponsor">
         <div className="sponsor-container">
           <div className="sponsor-content">
             <h2>Support Our Mission</h2>
-            <p>SynapseX is entirely student-run and currently funded by Georgia Tech's Student Government Association and Georgia Tech Student Foundation. With external support, we can accelerate progress on advanced BCI systems, expand training opportunities, and share open-source tools with the wider community.</p>
+            <p>SynapseX is entirely student-run and currently funded by Georgia Tech&apos;s Student Government Association and Georgia Tech Student Foundation. With external support, we can accelerate progress on advanced BCI systems, expand training opportunities, and share open-source tools with the wider community.</p>
             <div className="sponsor-buttons">
               <a href="#" className="sponsor-btn primary">Sponsorship Package</a>
-              <button className="sponsor-btn secondary">Donate Now</button>
+              <a href="#" className="sponsor-btn secondary">Donate Now</a>
             </div>
           </div>
         </div>
       </div>
 
-    <div className="contact-section">
+    <div className="contact-section" id="contact">
       <div className="contact-layout">
         {/* Left side - Metallic Logo */}
         <div className="metallic-logo-container">

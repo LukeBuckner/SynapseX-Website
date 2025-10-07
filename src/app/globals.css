@@ -37,7 +37,7 @@ body {
   align-items: center;
   border-radius: 50px;
   background: rgba(255, 255, 255, 0.11);
-  box-shadow: 0 0 3px 0 rgba(255, 255, 255, 0.19) inset, 0 0 2px 1px rgba(255, 255, 255, 0.53), 0 0 2rem -0.5rem #FFF;
+  box-shadow: 0 0 2px 0 rgba(255, 255, 255, 0.19) inset, 0 0 1px 1px rgba(255, 255, 255, 0.53), 0 0 1.5rem -0.5rem #FFF;
   backdrop-filter: blur(5.55px);
   -webkit-backdrop-filter: blur(5.55px);
   color: var(--color-white);
@@ -114,6 +114,12 @@ body {
   background: var(--color-gold-hover);
   border-color: var(--color-gold-hover);
   box-shadow: 0 8px 25px rgba(179, 163, 105, 0.4), 0 0px 10px rgba(0, 0, 0, 0.8);
+  color: #003057;
+}
+
+.label.primary {
+  background: var(--color-gold-hover);
+  border-color: var(--color-gold-hover);
   color: #003057;
 }
 
@@ -232,14 +238,41 @@ body {
   z-index: 1;
 }
 
+@keyframes heroFadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes heroEnter {
+  0% { opacity: 0; transform: translateY(24px) scale(0.985); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes heroFloat {
+  0% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-6px) scale(1.005); }
+  100% { transform: translateY(0) scale(1); }
+}
+
 .neuro-human { 
   max-width: 100%;
   max-height: 80vh;
   width: auto;
   height: auto;
   object-fit: contain;
-  opacity: 1;
-  transform: none;
+  opacity: 0;
+  /* Opacity-only to avoid layout/paint jank */
+  animation: heroEnter 1200ms ease-out 180ms forwards;
+  will-change: opacity;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .neuro-human {
+    animation: none;
+    opacity: 1;
+  }
 }
 
 
@@ -407,7 +440,7 @@ p{
   gap: 3rem;
   width: 100%;
   margin-top: 2rem;
-  padding: 4rem 2rem;
+  padding: 2rem 2rem;
   border-radius: 1.5rem;
   background: linear-gradient(to bottom, rgba(33, 44, 255, 0.314) 0%, rgba(29, 14, 233, 0.034) 100%);
   transition: transform 0.6s ease;
