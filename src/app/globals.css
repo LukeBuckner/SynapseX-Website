@@ -11,7 +11,7 @@ html, body {
 }
 
 :root {
-  --font-sans: "Raleway", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --font-sans: "Raleway", sans-serif;
   --color-blue-bg: #000000;
   --color-blue-primary: #1e1eff;
   --color-dark-blue: #111729;
