@@ -1,5 +1,8 @@
+'use client';
+
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import SpotlightCard from '../components/SpotlightCard/SpotlightCard';
 import ScrollTimeline from '../components/ScrollTimeline';
 import CountUpNumber from '../components/CountUpNumber';
@@ -8,13 +11,36 @@ import SequentialProcessItem from '../components/SequentialProcessItem';
 import MetalicLogo from '../components/MetalicLogo';
 
 export default function Home() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth <= 480);
+    };
+
+    // Check on mount
+    checkIsMobile();
+
+    // Add event listener for window resize
+    window.addEventListener('resize', checkIsMobile);
+
+    // Cleanup
+    return () => window.removeEventListener('resize', checkIsMobile);
+  }, []);
+
   return (
     <>
       <div className="hero" id="home">
         <div className="neuro-background"></div>
         <div className="hero-gradient-bg"></div>
         <div className="hero-left">
-          <Image src="/synapseatgt2copy.png" alt="SynapseX logo" className="hero-logo" width={256} height={64} />
+          <Image 
+            src={isMobile ? "/synapseatgtmobile.png" : "/synapseatgt2copy.png"} 
+            alt="SynapseX logo" 
+            className="hero-logo" 
+            width={256} 
+            height={64} 
+          />
           <div className="description">Pioneering student-led brain-computer interface innovation.</div>
           <div className="cta">
             <Link href="#projects" className="label primary">Explore Our Research</Link>
