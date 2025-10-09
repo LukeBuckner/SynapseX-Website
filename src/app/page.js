@@ -35,7 +35,7 @@ export default function Home() {
         <div className="hero-gradient-bg"></div>
         <div className="hero-left">
           <Image 
-            src={isMobile ? "/synapseatgtmobile.png" : "/synapseatgt2copy.png"} 
+            src={isMobile ? "/synapseatgtmobile.png" : "/synapseatgt.png"} 
             alt="SynapseX logo" 
             className="hero-logo" 
             width={256} 
