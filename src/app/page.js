@@ -34,6 +34,7 @@ export default function Home() {
         <div className="neuro-background"></div>
         <div className="hero-gradient-bg"></div>
         <div className="hero-left">
+          <h1 className="visually-hidden">SynapseX - Georgia Tech Brain-Computer Interface Innovation</h1>
           <Image 
             src={isMobile ? "/synapseatgtmobile.png" : "/synapseatgt.png"} 
             alt="SynapseX logo" 
@@ -48,7 +49,7 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-right">
-          <Image src="/neuro-human-blue.jpg" alt="Neural Interface Visualization" className="neuro-human" width={800} height={800} />
+          <Image src="/neuro-human-blue.jpg" alt="Brain-computer interface visualization showing neural connections and human silhouette in blue tones" className="neuro-human" width={800} height={800} />
         </div>
       </div>
 
@@ -114,7 +115,7 @@ export default function Home() {
                 <div className="process-flow">
                   <SequentialProcessItem index={0} delay={300}>
                     <div className="flow-image">
-                      <Image src="/flow-neuro.jpg" alt="Neural Flow" className="flow-img" width={500} height={310} />
+                      <Image src="/flow-neuro.jpg" alt="Neural signal processing visualization showing brain wave patterns and neural network connections" className="flow-img" width={500} height={310} />
                     </div>
                   </SequentialProcessItem>
                   <SequentialProcessItem index={1} delay={300}>
@@ -137,7 +138,7 @@ export default function Home() {
                   </SequentialProcessItem>
                   <SequentialProcessItem index={4} delay={300}>
                     <div className="flow-image">
-                      <Image src="/flow-binary.jpg" alt="Binary Flow" className="flow-img" width={500} height={310} />
+                      <Image src="/flow-binary.jpg" alt="Software development visualization showing binary code and digital processing for brain-computer interfaces" className="flow-img" width={500} height={310} />
                     </div>
                   </SequentialProcessItem>
                 </div>

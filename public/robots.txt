@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://gtsynapsex.com/sitemap.xml
+
+# Disallow crawling of admin or private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.next/
+Disallow: /api/
+
+# Allow crawling of all public content
+Allow: /
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.svg
+
+# Crawl-delay (optional)
+Crawl-delay: 1
