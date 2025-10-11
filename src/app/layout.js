@@ -4,14 +4,14 @@ import StructuredData from "../components/StructuredData";
 import "./globals.css";
 
 export const metadata = {
-  title: "GT SynapseX - Georgia Tech Brain-Computer Interface Innovation",
-  description: "SynapseX is Georgia Tech's first student-run BCI organization, uniting students from Neuroscience, Computer Science, and Engineering to build real brain-computer interface prototypes and shape the future of neurotechnology.",
+  title: "GT Synapse X - Georgia Tech Brain-Computer Interface Innovation",
+  description: "Synapse X is Georgia Tech's first student-run BCI organization, uniting students from Neuroscience, Computer Science, and Engineering to build real brain-computer interface prototypes and shape the future of neurotechnology.",
   keywords: "brain computer interface, BCI, Georgia Tech, neurotechnology, neuroscience, computer science, biomedical engineering, student research, neural engineering, machine learning, neurology",
   authors: [
     { name: "SynapseX Team", url: "https://gtsynapsex.com" },
     { name: "Georgia Institute of Technology" }
   ],
-  creator: "SynapseX - Georgia Tech Student Organization",
+  creator: "Synapse X - Georgia Tech Student Organization",
   publisher: "Georgia Institute of Technology",
   formatDetection: {
     email: true,
