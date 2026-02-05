@@ -214,6 +214,7 @@ export default function Home() {
             
             <div className="copyright">
               <p>© SynapseX 2025. All Rights Reserved</p>
+              <p>Website made by Sandro Karkusashvili ♡</p>
             </div>
           </div>
         </div>
